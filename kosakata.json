@@ -1,0 +1,37 @@
+[
+  {
+    "indonesia": "Ayam",
+    "bahasa_daerah": "Manuk",
+    "kategori": "Hewan",
+    "contoh_indonesia": "Itu ayam",
+    "contoh_daerah": "Idi manuk"
+  },
+  {
+    "indonesia": "Air",
+    "bahasa_daerah": "Lae",
+    "kategori": "Benda/Alam",
+    "contoh_indonesia": "Air bersih",
+    "contoh_daerah": "Laer bekhsih"
+  },
+  {
+    "indonesia": "Api",
+    "bahasa_daerah": "Api",
+    "kategori": "Unsur Alam",
+    "contoh_indonesia": "Api itu panas",
+    "contoh_daerah": "Api idi hangat"
+  },
+  {
+    "indonesia": "Anak",
+    "bahasa_daerah": "Anak",
+    "kategori": "Manusia",
+    "contoh_indonesia": "Anak orang",
+    "contoh_daerah": "Anak kalak"
+  },
+  {
+    "indonesia": "Angin",
+    "bahasa_daerah": "Angin",
+    "kategori": "Fenomena Alam",
+    "contoh_indonesia": "Anginnya dingin",
+    "contoh_daerah": "Anginna bergoh"
+  }
+]
