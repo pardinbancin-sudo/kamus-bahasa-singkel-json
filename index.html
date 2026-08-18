@@ -3,77 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamus Bahasa Singkel</title>
+    <title>Penerjemah Bahasa Singkel</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f8fafc; color: #1e293b; margin: 0; padding: 0; }
         header { background: #1e293b; color: white; padding: 30px 20px; text-align: center; }
         .container { max-width: 700px; margin: -20px auto 40px auto; padding: 0 20px; }
-        .search-box { background: white; padding: 12px 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; margin-bottom: 15px; }
-        .search-box input { width: 100%; border: none; outline: none; font-size: 16px; }
         
-        /* Desain Tombol Kategori */
-        .filter-container { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
-        .filter-btn { background: white; border: 1px solid #cbd5e1; padding: 6px 14px; border-radius: 20px; font-size: 13px; cursor: pointer; color: #475569; transition: all 0.2s; }
-        .filter-btn:hover, .filter-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
+        /* Desain Kotak Terjemahan Berdampingan */
+        .translator-box { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; margin-bottom: 20px; }
+        .translator-grid { display: flex; gap: 15px; align-items: center; }
+        .translator-pane { flex: 1; display: flex; flex-direction: column; }
+        .translator-pane label { font-size: 13px; font-weight: bold; color: #64748b; margin-bottom: 6px; }
+        .translator-pane textarea { width: 100%; height: 90px; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 15px; outline: none; resize: none; box-sizing: border-box; }
+        .translator-pane textarea:focus { border-color: #2563eb; }
+        .arrow-icon { font-size: 20px; color: #94a3b8; font-weight: bold; text-align: center; margin-top: 20px; }
 
         .stats { margin: 15px 0; font-size: 13px; color: #64748b; text-align: right; }
         .word-card { background: white; border-radius: 8px; padding: 15px 20px; margin-bottom: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
         .word-indo { font-size: 18px; font-weight: bold; color: #1e293b; }
         .word-daerah { font-size: 18px; font-weight: bold; color: #2563eb; }
-        .badge { background: #eff6ff; color: #2563eb; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-weight: bold; float: right; }
         .detail { margin-top: 8px; font-size: 14px; color: #64748b; border-top: 1px dashed #e2e8f0; padding-top: 8px; }
         .not-found { text-align: center; padding: 30px; background: white; border-radius: 8px; color: #64748b; }
+
+        @media (max-width: 600px) {
+            .translator-grid { flex-direction: column; }
+            .arrow-icon { transform: rotate(90deg); margin: 0; }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Kamus Bahasa Singkel</h1>
-        <p>Pusat Data Kosakata dan Terjemahan Interaktif</p>
+        <h1>Penerjemah Bahasa Singkel</h1>
+        <p>Ketik kata untuk menerjemahkan secara instan</p>
     </header>
 
     <div class="container">
-        <div class="search-box">
-            <input type="text" id="cari" placeholder="Cari kata Indonesia atau Bahasa Daerah..." onkeyup="cariKata()">
+        <!-- Kotak Terjemahan Berdampingan -->
+        <div class="translator-box">
+            <div class="translator-grid">
+                <div class="translator-pane">
+                    <label>Indonesia</label>
+                    <textarea id="inputIndo" placeholder="Ketik bahasa Indonesia..." onkeyup="terjemahkanKeSingkel()"></textarea>
+                </div>
+                <div class="arrow-icon">⇄</div>
+                <div class="translator-pane">
+                    <label>Singkil</label>
+                    <textarea id="outputSingkil" placeholder="Hasil terjemahan Singkil..." readonly style="background-color: #f1f5f9;"></textarea>
+                </div>
+            </div>
         </div>
 
-        <!-- Tombol Filter Kategori -->
-        <div class="filter-container" id="filterKategori">
-            <button class="filter-btn active" onclick="filterKategori('Semua', this)">Semua</button>
-            <button class="filter-btn" onclick="filterKategori('Hewan', this)">Hewan</button>
-            <button class="filter-btn" onclick="filterKategori('Benda/Alam', this)">Benda/Alam</button>
-            <button class="filter-btn" onclick="filterKategori('Unsur Alam', this)">Unsur Alam</button>
-            <button class="filter-btn" onclick="filterKategori('Manusia', this)">Manusia</button>
-        </div>
-
-        <div class="stats" id="stats">Memuat jumlah kata...</div>
-        <div id="hasil"><div class="not-found">Sedang memuat data...</div></div>
+        <div class="stats" id="stats">Memuat jumlah kosakata kamus...</div>
+        <div id="hasil"><div class="not-found">Ketik kata di atas untuk melihat daftar kamus terkait.</div></div>
     </div>
 
     <script>
         var kamusData = [];
-        var kategoriAktif = 'Semua';
         var urlJSON = "https://raw.githubusercontent.com/pardinbancin-sudo/kamus-bahasa-singkel-json/refs/heads/main/kosakata.json";
 
         fetch(urlJSON)
             .then(function(response) { return response.json(); })
             .then(function(data) {
                 kamusData = data;
-                tampilkanData(kamusData);
+                document.getElementById('stats').innerHTML = "Kamus siap digunakan (" + kamusData.length + " kosakata)";
             })
             .catch(function(error) {
-                document.getElementById('hasil').innerHTML = '<div class="not-found">Gagal memuat data kamus.</div>';
-                document.getElementById('stats').innerHTML = "";
+                document.getElementById('stats').innerHTML = "Gagal memuat data kamus.";
             });
 
-        function tampilkanData(data) {
+        function terjemahkanKeSingkel() {
+            var keyword = document.getElementById('inputIndo').value.toLowerCase().trim();
+            var outputBox = document.getElementById('outputSingkil');
             var container = document.getElementById('hasil');
-            var stats = document.getElementById('stats');
-            
-            stats.innerHTML = "Menampilkan " + data.length + " kosakata";
 
+            if (keyword === "") {
+                outputBox.value = "";
+                container.innerHTML = '<div class="not-found">Ketik kata di atas untuk melihat daftar kamus terkait.</div>';
+                return;
+            }
+
+            // Cari kata yang cocok di data kamus
+            var hasilPencarian = [];
+            var terjemahanDitemukan = "";
+
+            for (var i = 0; i < kamusData.length; i++) {
+                var item = kamusData[i];
+                if (item.indonesia.toLowerCase().indexOf(keyword) !== -1 || item.bahasa_daerah.toLowerCase().indexOf(keyword) !== -1) {
+                    hasilPencarian.push(item);
+                    if (item.indonesia.toLowerCase() === keyword) {
+                        terjemahanDitemukan = item.bahasa_daerah;
+                    }
+                }
+            }
+
+            // Tampilkan hasil terjemahan instan di kotak sebelah kanan jika pas
+            if (terjemahanDitemukan !== "") {
+                outputBox.value = terjemahanDitemukan;
+            } else if (hasilPencarian.length > 0) {
+                outputBox.value = hasilPencarian[0].bahasa_daerah + " (Mendekati)";
+            } else {
+                outputBox.value = "Kata tidak ditemukan";
+            }
+
+            // Tampilkan daftar kartu di bawahnya
+            tampilkanHasilCard(hasilPencarian);
+        }
+
+        function tampilkanHasilCard(data) {
+            var container = document.getElementById('hasil');
+            
             if (data.length === 0) {
-                container.innerHTML = '<div class="not-found">Kata tidak ditemukan dalam kamus.</div>';
+                container.innerHTML = '<div class="not-found">Kosakata tidak ditemukan dalam kamus.</div>';
                 return;
             }
             
@@ -81,45 +122,11 @@
             for (var i = 0; i < data.length; i++) {
                 var item = data[i];
                 html += '<div class="word-card">';
-                html += '<span class="badge">' + item.kategori + '</span>';
                 html += '<span class="word-indo">' + item.indonesia + '</span> ➔ <span class="word-daerah">' + item.bahasa_daerah + '</span>';
-                html += '<div class="detail"><b>Contoh:</b> ' + item.contoh_indonesia + ' (' + item.contoh_daerah + ')</div>';
+                html += '<div class="detail"><b>Kategori:</b> ' + (item.kategori || 'Umum') + ' | <b>Contoh:</b> ' + item.contoh_indonesia + ' (' + item.contoh_daerah + ')</div>';
                 html += '</div>';
             }
             container.innerHTML = html;
-        }
-
-        function filterKategori(kategori, tombol) {
-            kategoriAktif = kategori;
-            
-            var tombolList = document.querySelectorAll('.filter-btn');
-            for (var i = 0; i < tombolList.length; i++) {
-                tombolList[i].classList.remove('active');
-            }
-            tombol.classList.add('active');
-            
-            prosesPencarian();
-        }
-
-        function cariKata() {
-            prosesPencarian();
-        }
-
-        function prosesPencarian() {
-            var keyword = document.getElementById('cari').value.toLowerCase().trim();
-            var hasilFilter = [];
-            
-            for (var i = 0; i < kamusData.length; i++) {
-                var item = kamusData[i];
-                var cocokKeyword = item.indonesia.toLowerCase().indexOf(keyword) !== -1 || 
-                                   item.bahasa_daerah.toLowerCase().indexOf(keyword) !== -1;
-                var cocokKategori = (kategoriAktif === 'Semua') || (item.kategori === kategoriAktif);
-                
-                if (cocokKeyword && cocokKategori) {
-                    hasilFilter.push(item);
-                }
-            }
-            tampilkanData(hasilFilter);
         }
     </script>
 
