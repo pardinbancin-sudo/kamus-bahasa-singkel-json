@@ -3,53 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penerjemah Bahasa Singkel</title>
+    <title>Kamus Bahasa Singkel Berwarna</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f8fafc; color: #1e293b; margin: 0; padding: 0; }
-        header { background: #1e293b; color: white; padding: 30px 20px; text-align: center; }
-        .container { max-width: 700px; margin: -20px auto 40px auto; padding: 0 20px; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, sans-serif; 
+            background: linear-gradient(135deg, #4f46e5, #06b6d4); 
+            color: #1e293b; 
+            margin: 0; 
+            padding: 0; 
+            min-height: 100vh;
+        }
+        header { 
+            background: rgba(15, 23, 42, 0.85); 
+            color: white; 
+            padding: 35px 20px; 
+            text-align: center; 
+            backdrop-filter: blur(10px);
+            border-bottom: 3px solid #38bdf8;
+        }
+        header h1 { margin: 0 0 5px 0; font-size: 26px; }
+        header p { margin: 0; color: #cbd5e1; font-size: 14px; }
+
+        .container { max-width: 750px; margin: 30px auto; padding: 0 20px; }
         
-        /* Desain Kotak Terjemahan Berdampingan */
-        .translator-box { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; margin-bottom: 20px; }
-        .translator-grid { display: flex; gap: 15px; align-items: center; }
-        .translator-pane { flex: 1; display: flex; flex-direction: column; }
-        .translator-pane label { font-size: 13px; font-weight: bold; color: #64748b; margin-bottom: 6px; }
-        .translator-pane textarea { width: 100%; height: 90px; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 15px; outline: none; resize: none; box-sizing: border-box; }
-        .translator-pane textarea:focus { border-color: #2563eb; }
-        .arrow-icon { font-size: 20px; color: #94a3b8; font-weight: bold; text-align: center; margin-top: 20px; }
+        /* Kotak Terjemahan Berwarna & Presisi */
+        .translator-box { 
+            background: #ffffff; 
+            padding: 25px; 
+            border-radius: 16px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
+            margin-bottom: 25px; 
+        }
+        .translator-grid { 
+            display: flex; 
+            gap: 20px; 
+            align-items: center; 
+        }
+        .translator-pane { 
+            flex: 1; 
+            display: flex; 
+            flex-direction: column; 
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 12px;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+        .translator-pane:focus-within {
+            border-color: #4f46e5;
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
+        }
+        .translator-pane label { 
+            font-size: 13px; 
+            font-weight: bold; 
+            color: #4f46e5; 
+            margin-bottom: 8px; 
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .translator-pane textarea { 
+            width: 100%; 
+            height: 100px; 
+            padding: 10px; 
+            border: none; 
+            background: transparent;
+            font-size: 16px; 
+            outline: none; 
+            resize: none; 
+            box-sizing: border-box; 
+            color: #1e293b;
+        }
+        .arrow-icon { 
+            font-size: 24px; 
+            color: #4f46e5; 
+            font-weight: bold; 
+            text-align: center; 
+            background: #e0e7ff;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
 
-        .stats { margin: 15px 0; font-size: 13px; color: #64748b; text-align: right; }
-        .word-card { background: white; border-radius: 8px; padding: 15px 20px; margin-bottom: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
+        /* Tombol Aksi */
+        .action-btns { display: flex; gap: 8px; margin-top: 10px; border-top: 1px dashed #cbd5e1; padding-top: 10px; }
+        .btn-action { background: #4f46e5; border: none; padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: bold; cursor: pointer; color: white; transition: background 0.2s; }
+        .btn-action:hover { background: #4338ca; }
+
+        .stats { margin: 15px 0; font-size: 13px; color: #f1f5f9; text-align: right; font-weight: 600; }
+        
+        .word-card { 
+            background: white; 
+            border-radius: 12px; 
+            padding: 18px 20px; 
+            margin-bottom: 12px; 
+            border-left: 5px solid #06b6d4; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+            transition: transform 0.2s;
+        }
+        .word-card:hover { transform: translateY(-2px); }
         .word-indo { font-size: 18px; font-weight: bold; color: #1e293b; }
-        .word-daerah { font-size: 18px; font-weight: bold; color: #2563eb; }
+        .word-daerah { font-size: 18px; font-weight: bold; color: #4f46e5; }
         .detail { margin-top: 8px; font-size: 14px; color: #64748b; border-top: 1px dashed #e2e8f0; padding-top: 8px; }
-        .not-found { text-align: center; padding: 30px; background: white; border-radius: 8px; color: #64748b; }
+        .not-found { text-align: center; padding: 30px; background: white; border-radius: 12px; color: #64748b; font-weight: 500; }
 
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
             .translator-grid { flex-direction: column; }
-            .arrow-icon { transform: rotate(90deg); margin: 0; }
+            .arrow-icon { transform: rotate(90deg); margin: 5px auto; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Penerjemah Bahasa Singkel</h1>
-        <p>Ketik kata untuk menerjemahkan secara instan</p>
+        <h1>Kamus Bahasa Singkel</h1>
+        <p>Penerjemah Interaktif, Pelafalan Suara, & Salin Teks</p>
     </header>
 
     <div class="container">
-        <!-- Kotak Terjemahan Berdampingan -->
+        <!-- Kotak Terjemahan Presisi & Berwarna -->
         <div class="translator-box">
             <div class="translator-grid">
                 <div class="translator-pane">
-                    <label>Indonesia</label>
-                    <textarea id="inputIndo" placeholder="Ketik bahasa Indonesia..." onkeyup="terjemahkanKeSingkel()"></textarea>
+                    <label>Bahasa Indonesia</label>
+                    <textarea id="inputIndo" placeholder="Ketik kata Indonesia..." onkeyup="terjemahkanKeSingkel()"></textarea>
                 </div>
                 <div class="arrow-icon">⇄</div>
-                <div class="translator-pane">
-                    <label>Singkil</label>
-                    <textarea id="outputSingkil" placeholder="Hasil terjemahan Singkil..." readonly style="background-color: #f1f5f9;"></textarea>
+                <div class="translator-pane" style="background: #f0fdf4; border-color: #bbf7d0;">
+                    <label style="color: #16a34a;">Bahasa Singkel</label>
+                    <textarea id="outputSingkil" placeholder="Hasil terjemahan Singkil..." readonly style="background-color: transparent;"></textarea>
+                    <div class="action-btns">
+                        <button class="btn-action" style="background: #16a34a;" onclick="salinTeks()">📋 Salin</button>
+                        <button class="btn-action" style="background: #16a34a;" onclick="suaraPelafalan()">🔊 Dengar</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -83,7 +174,6 @@
                 return;
             }
 
-            // Cari kata yang cocok di data kamus
             var hasilPencarian = [];
             var terjemahanDitemukan = "";
 
@@ -97,7 +187,6 @@
                 }
             }
 
-            // Tampilkan hasil terjemahan instan di kotak sebelah kanan jika pas
             if (terjemahanDitemukan !== "") {
                 outputBox.value = terjemahanDitemukan;
             } else if (hasilPencarian.length > 0) {
@@ -106,7 +195,6 @@
                 outputBox.value = "Kata tidak ditemukan";
             }
 
-            // Tampilkan daftar kartu di bawahnya
             tampilkanHasilCard(hasilPencarian);
         }
 
@@ -123,10 +211,31 @@
                 var item = data[i];
                 html += '<div class="word-card">';
                 html += '<span class="word-indo">' + item.indonesia + '</span> ➔ <span class="word-daerah">' + item.bahasa_daerah + '</span>';
-                html += '<div class="detail"><b>Kategori:</b> ' + (item.kategori || 'Umum') + ' | <b>Contoh:</b> ' + item.contoh_indonesia + ' (' + item.contoh_daerah + ')</div>';
+                html += '<div class="detail"><b>Kategori:</b> ' + (item.kategori || 'Umum') + '<br><b>Contoh:</b> ' + item.contoh_indonesia + ' (' + item.contoh_daerah + ')</div>';
                 html += '</div>';
             }
             container.innerHTML = html;
+        }
+
+        function salinTeks() {
+            var outputBox = document.getElementById('outputSingkil');
+            if (outputBox.value === "" || outputBox.value === "Kata tidak ditemukan") {
+                alert("Tidak ada teks untuk disalin!");
+                return;
+            }
+            navigator.clipboard.writeText(outputBox.value);
+            alert("Teks berhasil disalin: " + outputBox.value);
+        }
+
+        function suaraPelafalan() {
+            var teks = document.getElementById('outputSingkil').value;
+            if (teks === "" || teks === "Kata tidak ditemukan") {
+                alert("Tidak ada kata untuk dilafalkan!");
+                return;
+            }
+            var speech = new SpeechSynthesisUtterance(teks);
+            speech.lang = 'id-ID';
+            window.speechSynthesis.speak(speech);
         }
     </script>
 
