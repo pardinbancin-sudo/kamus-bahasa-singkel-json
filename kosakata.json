@@ -4,34 +4,295 @@
     "bahasa_daerah": "Manuk",
     "kategori": "Hewan",
     "contoh_indonesia": "Itu ayam",
-    "contoh_daerah": "Idi manuk"
+    "contoh_daerah": "Idi manuk",
+    "": "Update ke GitHub"
   },
   {
     "indonesia": "Air",
     "bahasa_daerah": "Lae",
     "kategori": "Benda/Alam",
     "contoh_indonesia": "Air bersih",
-    "contoh_daerah": "Laer bekhsih"
+    "contoh_daerah": "Laer bekhsih",
+    "": ""
   },
   {
     "indonesia": "Api",
     "bahasa_daerah": "Api",
     "kategori": "Unsur Alam",
     "contoh_indonesia": "Api itu panas",
-    "contoh_daerah": "Api idi hangat"
+    "contoh_daerah": "Api idi hangat",
+    "": ""
   },
   {
     "indonesia": "Anak",
     "bahasa_daerah": "Anak",
     "kategori": "Manusia",
     "contoh_indonesia": "Anak orang",
-    "contoh_daerah": "Anak kalak"
+    "contoh_daerah": "Anak kalak",
+    "": ""
   },
   {
     "indonesia": "Angin",
     "bahasa_daerah": "Angin",
     "kategori": "Fenomena Alam",
     "contoh_indonesia": "Anginnya dingin",
-    "contoh_daerah": "Anginna bergoh"
+    "contoh_daerah": "Anginna bergoh",
+    "": ""
+  },
+  {
+    "indonesia": "Abadi",
+    "bahasa_daerah": "Abadi",
+    "kategori": "Kata sifat",
+    "contoh_indonesia": "Semoga abadi",
+    "contoh_daerah": "Abadi Giak",
+    "": ""
+  },
+  {
+    "indonesia": "Abang",
+    "bahasa_daerah": "Ogek",
+    "kategori": "Keluarga",
+    "contoh_indonesia": "Dia abangku",
+    "contoh_daerah": "Ia ogek ku",
+    "": ""
+  },
+  {
+    "indonesia": "Abu",
+    "bahasa_daerah": "Awam",
+    "kategori": "Benda",
+    "contoh_indonesia": "Abu pembakaran",
+    "contoh_daerah": "Awam penutungan",
+    "": ""
+  },
+  {
+    "indonesia": "Acara",
+    "bahasa_daerah": "Acakha",
+    "kategori": "Kegiatan",
+    "contoh_indonesia": "Acara pernikahan",
+    "contoh_daerah": "Acakha Pekhnikahan",
+    "": ""
+  },
+  {
+    "indonesia": "Adat",
+    "bahasa_daerah": "Adat",
+    "kategori": "Budaya",
+    "contoh_indonesia": "Adat kita",
+    "contoh_daerah": "Adat ta",
+    "": ""
+  },
+  {
+    "indonesia": "Adik",
+    "bahasa_daerah": "Adik",
+    "kategori": "Keluarga",
+    "contoh_indonesia": "Adikku",
+    "contoh_daerah": "Adikku",
+    "": ""
+  },
+  {
+    "indonesia": "Adil",
+    "bahasa_daerah": "Adil",
+    "kategori": "Kata sifat",
+    "contoh_indonesia": "Hakim yang Adil",
+    "contoh_daerah": "Hakim na adil",
+    "": ""
+  },
+  {
+    "indonesia": "Agama",
+    "bahasa_daerah": "Agama",
+    "kategori": "Umum",
+    "contoh_indonesia": "Agama islam",
+    "contoh_daerah": "Agama islam",
+    "": ""
+  },
+  {
+    "indonesia": "Agen",
+    "bahasa_daerah": "Agen",
+    "kategori": "Profesi",
+    "contoh_indonesia": "Agen ayam",
+    "contoh_daerah": "Agen Manuk",
+    "": ""
+  },
+  {
+    "indonesia": "Akar",
+    "bahasa_daerah": "Ukhat",
+    "kategori": "Tumbuhan",
+    "contoh_indonesia": "Akar kelapa",
+    "contoh_daerah": "Ukhat niokh",
+    "": ""
+  },
+  {
+    "indonesia": "Akhir",
+    "bahasa_daerah": "Pehabisan",
+    "kategori": "Keterangan",
+    "contoh_indonesia": "Akhir hidup",
+    "contoh_daerah": "Pehabisan geluh",
+    "": ""
+  },
+  {
+    "indonesia": "Akibat",
+    "bahasa_daerah": "Gegakha",
+    "kategori": "Umum",
+    "contoh_indonesia": "Akibat salah",
+    "contoh_daerah": "Gegakha salah",
+    "": ""
+  },
+  {
+    "indonesia": "Aktif",
+    "bahasa_daerah": "Aktif",
+    "kategori": "Kata sifat",
+    "contoh_indonesia": "Tombol aktif",
+    "contoh_daerah": "Tombol aktif",
+    "": ""
+  },
+  {
+    "indonesia": "Aku",
+    "bahasa_daerah": "Aku",
+    "kategori": "Kata ganti",
+    "contoh_indonesia": "Aku dan kamu",
+    "contoh_daerah": " Aku dan kona",
+    "": ""
+  },
+  {
+    "indonesia": "Alam",
+    "bahasa_daerah": "Alam",
+    "kategori": "Alam",
+    "contoh_indonesia": "Alam kubur",
+    "contoh_daerah": "Alam kubukh",
+    "": ""
+  },
+  {
+    "indonesia": "Alat",
+    "bahasa_daerah": "Alat",
+    "kategori": "Benda",
+    "contoh_indonesia": "Alat gali",
+    "contoh_daerah": "Alat kukhak",
+    "": ""
+  },
+  {
+    "indonesia": "Alis",
+    "bahasa_daerah": "Buk sleben",
+    "kategori": "Anggota tubuh",
+    "contoh_indonesia": "Alisnya indah",
+    "contoh_daerah": "Buk sleben na mende",
+    "": ""
+  },
+  {
+    "indonesia": "Alun",
+    "bahasa_daerah": "Alun",
+    "kategori": "Alam",
+    "contoh_indonesia": "Alun kan ",
+    "contoh_daerah": "Alun ken",
+    "": ""
+  },
+  {
+    "indonesia": "Ambil",
+    "bahasa_daerah": "Amat",
+    "kategori": "Kata kerja",
+    "contoh_indonesia": "Ambil uang",
+    "contoh_daerah": "Ambil kepeng",
+    "": ""
+  },
+  {
+    "indonesia": "Ampun",
+    "bahasa_daerah": "Ampun",
+    "kategori": "Ungkapan",
+    "contoh_indonesia": "Minta ampun",
+    "contoh_daerah": "Mido ampun",
+    "": ""
+  },
+  {
+    "indonesia": "Angka",
+    "bahasa_daerah": "Angka",
+    "kategori": "Umum",
+    "contoh_indonesia": "Angka satu",
+    "contoh_daerah": " Angka sada",
+    "": ""
+  },
+  {
+    "indonesia": "Antar",
+    "bahasa_daerah": "Takhuh",
+    "kategori": "Kata kerja",
+    "contoh_indonesia": "Antar kan dulu",
+    "contoh_daerah": "Takhuhkan lebe",
+    "": ""
+  },
+  {
+    "indonesia": "Apel",
+    "bahasa_daerah": "Apel",
+    "kategori": "Buah",
+    "contoh_indonesia": "Buah apel",
+    "contoh_daerah": "Wuah apel",
+    "": ""
+  },
+  {
+    "indonesia": "Arang",
+    "bahasa_daerah": "Khakhang",
+    "kategori": "Benda",
+    "contoh_indonesia": "Arang itu hitam",
+    "contoh_daerah": "Khakhang idi bereng",
+    "": ""
+  },
+  {
+    "indonesia": "Arus",
+    "bahasa_daerah": "Arus",
+    "kategori": "Alam",
+    "contoh_indonesia": "Arus air",
+    "contoh_daerah": "Arus lae",
+    "": ""
+  },
+  {
+    "indonesia": "Asam",
+    "bahasa_daerah": "Macem",
+    "kategori": "Rasa",
+    "contoh_indonesia": "Rasanya asem",
+    "contoh_daerah": "Khasana macem",
+    "": ""
+  },
+  {
+    "indonesia": "Asap",
+    "bahasa_daerah": "Cembekh",
+    "kategori": "Alam",
+    "contoh_indonesia": "Banyak asap",
+    "contoh_daerah": "Mbue cembekh",
+    "": ""
+  },
+  {
+    "indonesia": "Asin",
+    "bahasa_daerah": "Masin",
+    "kategori": "Rasa",
+    "contoh_indonesia": "Rasa asin",
+    "contoh_daerah": "Khasa masin",
+    "": ""
+  },
+  {
+    "indonesia": "Atap",
+    "bahasa_daerah": "Wuwungan Sapo",
+    "kategori": "Bagian bangunan",
+    "contoh_indonesia": "Atapnya jatuh",
+    "contoh_daerah": " Bubung sapona dabuh",
+    "": ""
+  },
+  {
+    "indonesia": "Awan",
+    "bahasa_daerah": "Hembun",
+    "kategori": "Alam",
+    "contoh_indonesia": "Awan putih",
+    "contoh_daerah": "Hembun betakh",
+    "": ""
+  },
+  {
+    "indonesia": "Ayah",
+    "bahasa_daerah": "Ayah",
+    "kategori": "Keluarga",
+    "contoh_indonesia": "Ayah kami",
+    "contoh_daerah": "Ayah kami",
+    "": ""
+  },
+  {
+    "indonesia": "Ayun",
+    "bahasa_daerah": "Anggun",
+    "kategori": "Kata kerja",
+    "contoh_indonesia": "Ayun anak",
+    "contoh_daerah": "Anggun anak",
+    "": ""
   }
 ]
