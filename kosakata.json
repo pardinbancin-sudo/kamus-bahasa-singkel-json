@@ -294,5 +294,341 @@
     "contoh_indonesia": "Ayun anak",
     "contoh_daerah": "Anggun anak",
     "": ""
+  },
+  {
+    "indonesia": "Babi",
+    "bahasa_daerah": "Bukhon",
+    "kategori": "Hewan",
+    "contoh_indonesia": "Itu Babi",
+    "contoh_daerah": "Idi Bukhon",
+    "": ""
+  },
+  {
+    "indonesia": "Baca",
+    "bahasa_daerah": "waca",
+    "kategori": "Kata kerja",
+    "contoh_indonesia": "Baca Buku",
+    "contoh_daerah": "Waca Buku",
+    "": ""
+  },
+  {
+    "indonesia": "Badan",
+    "bahasa_daerah": "wadan",
+    "kategori": "Anggota tubuh",
+    "contoh_indonesia": "Badan saya",
+    "contoh_daerah": "Wadanku",
+    "": ""
+  },
+  {
+    "indonesia": "Bagus",
+    "bahasa_daerah": "Mende",
+    "kategori": "Kata sifat",
+    "contoh_indonesia": "Bagus Sekali",
+    "contoh_daerah": "Mendena",
+    "": ""
+  },
+  {
+    "indonesia": "Bahu",
+    "bahasa_daerah": "Wakha",
+    "kategori": "Anggota tubuh",
+    "contoh_indonesia": "Cidera Bahu",
+    "contoh_daerah": "Cecekhwek Wakha",
+    "": ""
+  },
+  {
+    "indonesia": "Baju",
+    "bahasa_daerah": "Waju",
+    "kategori": "Pakaian",
+    "contoh_indonesia": "Baju Lama",
+    "contoh_daerah": "Waju Ndekah",
+    "": ""
+  },
+  {
+    "indonesia": "Bakar",
+    "bahasa_daerah": "Tutung",
+    "kategori": "Kata kerja",
+    "contoh_indonesia": "Bakar Sampah",
+    "contoh_daerah": "Tutung Khikap",
+    "": ""
+  },
+  {
+    "indonesia": "Bakso",
+    "bahasa_daerah": "Bakso",
+    "kategori": "Makanan",
+    "contoh_indonesia": " Bakso itu",
+    "contoh_daerah": "Bakso idi",
+    "": ""
+  },
+  {
+    "indonesia": "Balik",
+    "bahasa_daerah": "Walik",
+    "kategori": "Kata kerja",
+    "contoh_indonesia": "Balik Badan",
+    "contoh_daerah": "Walik Wadan",
+    "": ""
+  },
+  {
+    "indonesia": "Bambu",
+    "bahasa_daerah": "Wuluh",
+    "kategori": "Tumbuhan",
+    "contoh_indonesia": "Bambu Muda",
+    "contoh_daerah": "Wuluh Menguda",
+    "": ""
+  },
+  {
+    "indonesia": "Banjir",
+    "bahasa_daerah": "Belen Lae",
+    "kategori": "Alam",
+    "contoh_indonesia": "Banjir Deras",
+    "contoh_daerah": "Mbelen Lae Ndekhas",
+    "": ""
+  },
+  {
+    "indonesia": "Bantal",
+    "bahasa_daerah": "Tendean",
+    "kategori": "Benda",
+    "contoh_indonesia": "Bantal empuk",
+    "contoh_daerah": " Tendean Moh",
+    "": ""
+  },
+  {
+    "indonesia": "Bantu",
+    "bahasa_daerah": " Bantu",
+    "kategori": "Kata kerja",
+    "contoh_indonesia": "Jangan Bantu",
+    "contoh_daerah": " Ulang Bantu",
+    "": ""
+  },
+  {
+    "indonesia": "Banyak",
+    "bahasa_daerah": "Mbue",
+    "kategori": "Kata sifat",
+    "contoh_indonesia": "Banyak Orang ",
+    "contoh_daerah": "Mbue Kalak",
+    "": ""
+  },
+  {
+    "indonesia": "Barang",
+    "bahasa_daerah": "Wakhang",
+    "kategori": "Benda",
+    "contoh_indonesia": "Barang Berharga",
+    "contoh_daerah": "Wakhang Mehakhga",
+    "": ""
+  },
+  {
+    "indonesia": "Baru",
+    "bahasa_daerah": "Lembakhu",
+    "kategori": "Kata sifat",
+    "contoh_indonesia": "Baju Baru",
+    "contoh_daerah": "Waju Lembakhu",
+    "": ""
+  },
+  {
+    "indonesia": "Batu",
+    "bahasa_daerah": "Watu",
+    "kategori": "Alam",
+    "contoh_indonesia": "Batu Berat",
+    "contoh_daerah": "Watu Mbekhat",
+    "": ""
+  },
+  {
+    "indonesia": "Bawah",
+    "bahasa_daerah": "Tekhuh",
+    "kategori": "Keterangan",
+    "contoh_indonesia": "Bawah Tanah",
+    "contoh_daerah": "Tekhuh Tanoh",
+    "": ""
+  },
+  {
+    "indonesia": "Bayar",
+    "bahasa_daerah": "Wayakh",
+    "kategori": "Kata kerja",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Bebek",
+    "bahasa_daerah": "Itiq",
+    "kategori": "Hewan",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Belajar",
+    "bahasa_daerah": "Belajakh",
+    "kategori": "Kata kerja",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Belanja",
+    "bahasa_daerah": "Welanja",
+    "kategori": "Kata kerja",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Benar",
+    "bahasa_daerah": "Betul",
+    "kategori": "Kata sifat",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Benci",
+    "bahasa_daerah": "Moyang Ate",
+    "kategori": "Perasaan",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Benda",
+    "bahasa_daerah": "Bakhang",
+    "kategori": "Umum",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Bersih",
+    "bahasa_daerah": "Bekhsih",
+    "kategori": "Kata sifat",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Besar",
+    "bahasa_daerah": "Mbelen",
+    "kategori": "Kata sifat",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Bibir",
+    "bahasa_daerah": "Wiwekh",
+    "kategori": "Anggota tubuh",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Biji",
+    "bahasa_daerah": "Wiji",
+    "kategori": "Tumbuhan",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Biru",
+    "bahasa_daerah": "Mekhatah Welau",
+    "kategori": "Warna",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Bola",
+    "bahasa_daerah": "Bola",
+    "kategori": "Benda",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Boleh",
+    "bahasa_daerah": "Jadi",
+    "kategori": "Kata kerja",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Bosan",
+    "bahasa_daerah": "Bosan",
+    "kategori": "Perasaan",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Botol",
+    "bahasa_daerah": "Wotol",
+    "kategori": "Benda",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Buah",
+    "bahasa_daerah": "Wuah",
+    "kategori": "Makanan",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Buku",
+    "bahasa_daerah": "Wuku",
+    "kategori": "Benda",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Bulan",
+    "bahasa_daerah": "Wulan",
+    "kategori": "Alam",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Bunga",
+    "bahasa_daerah": "Wunga",
+    "kategori": "Tumbuhan",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Bunyi",
+    "bahasa_daerah": "Bunyi",
+    "kategori": "Umum",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Burung",
+    "bahasa_daerah": "Memanuk",
+    "kategori": "Hewan",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Bus",
+    "bahasa_daerah": "Bus",
+    "kategori": "Transportasi",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
+  },
+  {
+    "indonesia": "Buta",
+    "bahasa_daerah": "Mbuta",
+    "kategori": "Kata sifat",
+    "contoh_indonesia": "",
+    "contoh_daerah": "",
+    "": ""
   }
 ]
